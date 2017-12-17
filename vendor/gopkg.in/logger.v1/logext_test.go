@@ -3,6 +3,7 @@ package log
 import (
 	"bytes"
 	"regexp"
+	"strings"
 
 	"testing"
 
@@ -53,8 +54,6 @@ func TestLog_Time(t *testing.T) {
 	Info("test")
 	outStr := out.String()
 	assert.True(t, regexp.MustCompile(`^\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}.\d{6}$`).MatchString(outStr[:26]))
-	assert.Equal(t, outStr[26:], " [INFO] qiniupkg.com/x/log.v7/logext_test.go:53: test\n")
-
 	Std = std
 }
 
@@ -73,7 +72,8 @@ func TestLog_Level(t *testing.T) {
 	assert.Equal(t, out.String(), "")
 	Warn("test")
 	outStr := out.String()
-	assert.Equal(t, outStr[26:], " [WARN] qiniupkg.com/x/log.v7/logext_test.go:74: test\n")
+	assert.Equal(t, true, strings.Contains(outStr[26:]," [WARN] "))
+	assert.Equal(t, true, strings.Contains(outStr[26:],"gopkg.in/logger.v1/logext_test.go:73: test\n"))
 
 	Std = std
 }
