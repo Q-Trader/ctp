@@ -1,4 +1,4 @@
-package types
+package ctp
 
 import "gopkg.in/logger.v1"
 

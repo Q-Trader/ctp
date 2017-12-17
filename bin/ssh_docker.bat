@@ -1,0 +1,1 @@
+docker exec -it xubuntu sh -c "cd /go/src/git.rxforce.io/xtrader/ctp && zsh"
