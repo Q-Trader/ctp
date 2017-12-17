@@ -1,4 +1,4 @@
-package ctp
+package types
 
 import "gopkg.in/logger.v1"
 
@@ -234,25 +234,25 @@ type Instrument struct {
 	IsTrading bool
 
 	/*
-	/////////////////////////////////////////////////////////////////////////
-	///TFtdcPositionTypeType是一个持仓类型类型
-	/////////////////////////////////////////////////////////////////////////
-	///净持仓
-	#define THOST_FTDC_PT_Net '1'
-	///综合持仓
-	#define THOST_FTDC_PT_Gross '2'
+		/////////////////////////////////////////////////////////////////////////
+		///TFtdcPositionTypeType是一个持仓类型类型
+		/////////////////////////////////////////////////////////////////////////
+		///净持仓
+		#define THOST_FTDC_PT_Net '1'
+		///综合持仓
+		#define THOST_FTDC_PT_Gross '2'
 	*/
 	///持仓类型
 	PositionType string
 
 	/*
-	/////////////////////////////////////////////////////////////////////////
-	///TFtdcPositionDateTypeType是一个持仓日期类型类型
-	/////////////////////////////////////////////////////////////////////////
-	///使用历史持仓
-	#define THOST_FTDC_PDT_UseHistory '1'
-	///不使用历史持仓
-	#define THOST_FTDC_PDT_NoUseHistory '2'
+		/////////////////////////////////////////////////////////////////////////
+		///TFtdcPositionDateTypeType是一个持仓日期类型类型
+		/////////////////////////////////////////////////////////////////////////
+		///使用历史持仓
+		#define THOST_FTDC_PDT_UseHistory '1'
+		///不使用历史持仓
+		#define THOST_FTDC_PDT_NoUseHistory '2'
 	*/
 	///持仓日期类型
 	PositionDateType string
@@ -269,26 +269,26 @@ type InvestorPosition struct {
 	InstrumentID string
 	///持仓多空方向
 	/*
-	/////////////////////////////////////////////////////////////////////////
-	///TFtdcPosiDirectionType是一个持仓多空方向类型
-	/////////////////////////////////////////////////////////////////////////
-	///净
-	#define THOST_FTDC_PD_Net '1'
-	///多头
-	#define THOST_FTDC_PD_Long '2'
-	///空头
-	#define THOST_FTDC_PD_Short '3'
+		/////////////////////////////////////////////////////////////////////////
+		///TFtdcPosiDirectionType是一个持仓多空方向类型
+		/////////////////////////////////////////////////////////////////////////
+		///净
+		#define THOST_FTDC_PD_Net '1'
+		///多头
+		#define THOST_FTDC_PD_Long '2'
+		///空头
+		#define THOST_FTDC_PD_Short '3'
 	*/
 	PosiDirection string
 	///投机套保标志
 	/*
-	/////////////////////////////////////////////////////////////////////////
-	///TFtdcHedgeFlagType是一个投机套保标志类型
-	/////////////////////////////////////////////////////////////////////////
-	///投机
-	#define THOST_FTDC_HF_Speculation '1'
-	///套保
-	#define THOST_FTDC_HF_Hedge '3'
+		/////////////////////////////////////////////////////////////////////////
+		///TFtdcHedgeFlagType是一个投机套保标志类型
+		/////////////////////////////////////////////////////////////////////////
+		///投机
+		#define THOST_FTDC_HF_Speculation '1'
+		///套保
+		#define THOST_FTDC_HF_Hedge '3'
 	*/
 	HedgeFlag string
 	///持仓日期类型
@@ -417,13 +417,13 @@ type Order struct {
 	OrderPriceType string
 	///买卖方向
 	/*
-	/////////////////////////////////////////////////////////////////////////
-	///TFtdcDirectionType是一个买卖方向类型
-	/////////////////////////////////////////////////////////////////////////
-	///买
-	#define THOST_FTDC_D_Buy '0'
-	///卖
-	#define THOST_FTDC_D_Sell '1'
+		/////////////////////////////////////////////////////////////////////////
+		///TFtdcDirectionType是一个买卖方向类型
+		/////////////////////////////////////////////////////////////////////////
+		///买
+		#define THOST_FTDC_D_Buy '0'
+		///卖
+		#define THOST_FTDC_D_Sell '1'
 
 	*/
 	Direction string
@@ -438,21 +438,21 @@ type Order struct {
 	///有效期类型
 
 	/*
-	/////////////////////////////////////////////////////////////////////////
-	///TFtdcTimeConditionType是一个有效期类型类型
-	/////////////////////////////////////////////////////////////////////////
-	///立即完成，否则撤销
-	#define THOST_FTDC_TC_IOC '1'
-	///本节有效
-	#define THOST_FTDC_TC_GFS '2'
-	///当日有效
-	#define THOST_FTDC_TC_GFD '3'
-	///指定日期前有效
-	#define THOST_FTDC_TC_GTD '4'
-	///撤销前有效
-	#define THOST_FTDC_TC_GTC '5'
-	///集合竞价有效
-	#define THOST_FTDC_TC_GFA '6'
+		/////////////////////////////////////////////////////////////////////////
+		///TFtdcTimeConditionType是一个有效期类型类型
+		/////////////////////////////////////////////////////////////////////////
+		///立即完成，否则撤销
+		#define THOST_FTDC_TC_IOC '1'
+		///本节有效
+		#define THOST_FTDC_TC_GFS '2'
+		///当日有效
+		#define THOST_FTDC_TC_GFD '3'
+		///指定日期前有效
+		#define THOST_FTDC_TC_GTD '4'
+		///撤销前有效
+		#define THOST_FTDC_TC_GTC '5'
+		///集合竞价有效
+		#define THOST_FTDC_TC_GFA '6'
 	*/
 	TimeCondition string
 	///GTD日期
@@ -460,15 +460,15 @@ type Order struct {
 	///成交量类型
 
 	/*
-	/////////////////////////////////////////////////////////////////////////
-	///TFtdcVolumeConditionType是一个成交量类型类型
-	/////////////////////////////////////////////////////////////////////////
-	///任何数量
-	#define THOST_FTDC_VC_AV '1'
-	///最小数量
-	#define THOST_FTDC_VC_MV '2'
-	///全部数量
-	#define THOST_FTDC_VC_CV '3'
+		/////////////////////////////////////////////////////////////////////////
+		///TFtdcVolumeConditionType是一个成交量类型类型
+		/////////////////////////////////////////////////////////////////////////
+		///任何数量
+		#define THOST_FTDC_VC_AV '1'
+		///最小数量
+		#define THOST_FTDC_VC_MV '2'
+		///全部数量
+		#define THOST_FTDC_VC_CV '3'
 
 	*/
 	VolumeCondition string
@@ -476,41 +476,41 @@ type Order struct {
 	MinVolume int
 	///触发条件
 	/*
-	/////////////////////////////////////////////////////////////////////////
-	///TFtdcContingentConditionType是一个触发条件类型
-	/////////////////////////////////////////////////////////////////////////
-	///立即
-	#define THOST_FTDC_CC_Immediately '1'
-	///止损
-	#define THOST_FTDC_CC_Touch '2'
-	///止赢
-	#define THOST_FTDC_CC_TouchProfit '3'
-	///预埋单
-	#define THOST_FTDC_CC_ParkedOrder '4'
-	///条件价大于最新价
-	#define THOST_FTDC_CC_StopPriceGreaterThanLastPrice '5'
-	///条件价大于等于最新价
-	#define THOST_FTDC_CC_StopPriceGreaterEqualLastPrice '6'
-	///条件价小于最新价
-	#define THOST_FTDC_CC_StopPriceLesserThanLastPrice '7'
-	///条件价小于等于最新价
-	#define THOST_FTDC_CC_StopPriceLesserEqualLastPrice '8'
-	///条件价大于卖一价
-	#define THOST_FTDC_CC_StopPriceGreaterThanAskPrice '9'
-	///条件价大于等于卖一价
-	#define THOST_FTDC_CC_StopPriceGreaterEqualAskPrice 'A'
-	///条件价小于卖一价
-	#define THOST_FTDC_CC_StopPriceLesserThanAskPrice 'B'
-	///条件价小于等于卖一价
-	#define THOST_FTDC_CC_StopPriceLesserEqualAskPrice 'C'
-	///条件价大于买一价
-	#define THOST_FTDC_CC_StopPriceGreaterThanBidPrice 'D'
-	///条件价大于等于买一价
-	#define THOST_FTDC_CC_StopPriceGreaterEqualBidPrice 'E'
-	///条件价小于买一价
-	#define THOST_FTDC_CC_StopPriceLesserThanBidPrice 'F'
-	///条件价小于等于买一价
-	#define THOST_FTDC_CC_StopPriceLesserEqualBidPrice 'a'
+		/////////////////////////////////////////////////////////////////////////
+		///TFtdcContingentConditionType是一个触发条件类型
+		/////////////////////////////////////////////////////////////////////////
+		///立即
+		#define THOST_FTDC_CC_Immediately '1'
+		///止损
+		#define THOST_FTDC_CC_Touch '2'
+		///止赢
+		#define THOST_FTDC_CC_TouchProfit '3'
+		///预埋单
+		#define THOST_FTDC_CC_ParkedOrder '4'
+		///条件价大于最新价
+		#define THOST_FTDC_CC_StopPriceGreaterThanLastPrice '5'
+		///条件价大于等于最新价
+		#define THOST_FTDC_CC_StopPriceGreaterEqualLastPrice '6'
+		///条件价小于最新价
+		#define THOST_FTDC_CC_StopPriceLesserThanLastPrice '7'
+		///条件价小于等于最新价
+		#define THOST_FTDC_CC_StopPriceLesserEqualLastPrice '8'
+		///条件价大于卖一价
+		#define THOST_FTDC_CC_StopPriceGreaterThanAskPrice '9'
+		///条件价大于等于卖一价
+		#define THOST_FTDC_CC_StopPriceGreaterEqualAskPrice 'A'
+		///条件价小于卖一价
+		#define THOST_FTDC_CC_StopPriceLesserThanAskPrice 'B'
+		///条件价小于等于卖一价
+		#define THOST_FTDC_CC_StopPriceLesserEqualAskPrice 'C'
+		///条件价大于买一价
+		#define THOST_FTDC_CC_StopPriceGreaterThanBidPrice 'D'
+		///条件价大于等于买一价
+		#define THOST_FTDC_CC_StopPriceGreaterEqualBidPrice 'E'
+		///条件价小于买一价
+		#define THOST_FTDC_CC_StopPriceLesserThanBidPrice 'F'
+		///条件价小于等于买一价
+		#define THOST_FTDC_CC_StopPriceLesserEqualBidPrice 'a'
 	*/
 	ContingentCondition string
 	///止损价
@@ -804,41 +804,41 @@ type InputOrder struct {
 	///最小成交量
 	MinVolume int
 	/*
-	/////////////////////////////////////////////////////////////////////////
-	///触发条件类型
-	/////////////////////////////////////////////////////////////////////////
-	///立即
-	#define THOST_FTDC_CC_Immediately '1'
-	///止损
-	#define THOST_FTDC_CC_Touch '2'
-	///止赢
-	#define THOST_FTDC_CC_TouchProfit '3'
-	///预埋单
-	#define THOST_FTDC_CC_ParkedOrder '4'
-	///条件价大于最新价
-	#define THOST_FTDC_CC_StopPriceGreaterThanLastPrice '5'
-	///条件价大于等于最新价
-	#define THOST_FTDC_CC_StopPriceGreaterEqualLastPrice '6'
-	///条件价小于最新价
-	#define THOST_FTDC_CC_StopPriceLesserThanLastPrice '7'
-	///条件价小于等于最新价
-	#define THOST_FTDC_CC_StopPriceLesserEqualLastPrice '8'
-	///条件价大于卖一价
-	#define THOST_FTDC_CC_StopPriceGreaterThanAskPrice '9'
-	///条件价大于等于卖一价
-	#define THOST_FTDC_CC_StopPriceGreaterEqualAskPrice 'A'
-	///条件价小于卖一价
-	#define THOST_FTDC_CC_StopPriceLesserThanAskPrice 'B'
-	///条件价小于等于卖一价
-	#define THOST_FTDC_CC_StopPriceLesserEqualAskPrice 'C'
-	///条件价大于买一价
-	#define THOST_FTDC_CC_StopPriceGreaterThanBidPrice 'D'
-	///条件价大于等于买一价
-	#define THOST_FTDC_CC_StopPriceGreaterEqualBidPrice 'E'
-	///条件价小于买一价
-	#define THOST_FTDC_CC_StopPriceLesserThanBidPrice 'F'
-	///条件价小于等于买一价
-	#define THOST_FTDC_CC_StopPriceLesserEqualBidPrice 'a'
+		/////////////////////////////////////////////////////////////////////////
+		///触发条件类型
+		/////////////////////////////////////////////////////////////////////////
+		///立即
+		#define THOST_FTDC_CC_Immediately '1'
+		///止损
+		#define THOST_FTDC_CC_Touch '2'
+		///止赢
+		#define THOST_FTDC_CC_TouchProfit '3'
+		///预埋单
+		#define THOST_FTDC_CC_ParkedOrder '4'
+		///条件价大于最新价
+		#define THOST_FTDC_CC_StopPriceGreaterThanLastPrice '5'
+		///条件价大于等于最新价
+		#define THOST_FTDC_CC_StopPriceGreaterEqualLastPrice '6'
+		///条件价小于最新价
+		#define THOST_FTDC_CC_StopPriceLesserThanLastPrice '7'
+		///条件价小于等于最新价
+		#define THOST_FTDC_CC_StopPriceLesserEqualLastPrice '8'
+		///条件价大于卖一价
+		#define THOST_FTDC_CC_StopPriceGreaterThanAskPrice '9'
+		///条件价大于等于卖一价
+		#define THOST_FTDC_CC_StopPriceGreaterEqualAskPrice 'A'
+		///条件价小于卖一价
+		#define THOST_FTDC_CC_StopPriceLesserThanAskPrice 'B'
+		///条件价小于等于卖一价
+		#define THOST_FTDC_CC_StopPriceLesserEqualAskPrice 'C'
+		///条件价大于买一价
+		#define THOST_FTDC_CC_StopPriceGreaterThanBidPrice 'D'
+		///条件价大于等于买一价
+		#define THOST_FTDC_CC_StopPriceGreaterEqualBidPrice 'E'
+		///条件价小于买一价
+		#define THOST_FTDC_CC_StopPriceLesserThanBidPrice 'F'
+		///条件价小于等于买一价
+		#define THOST_FTDC_CC_StopPriceLesserEqualBidPrice 'a'
 	*/
 	///触发条件
 	ContingentCondition string
@@ -847,23 +847,23 @@ type InputOrder struct {
 
 	/*
 
-	/////////////////////////////////////////////////////////////////////////
-	///TFtdcForceCloseReasonType是一个强平原因类型
-	/////////////////////////////////////////////////////////////////////////
-	///非强平
-	#define THOST_FTDC_FCC_NotForceClose '0'
-	///资金不足
-	#define THOST_FTDC_FCC_LackDeposit '1'
-	///客户超仓
-	#define THOST_FTDC_FCC_ClientOverPositionLimit '2'
-	///会员超仓
-	#define THOST_FTDC_FCC_MemberOverPositionLimit '3'
-	///持仓非整数倍
-	#define THOST_FTDC_FCC_NotMultiple '4'
-	///违规
-	#define THOST_FTDC_FCC_Violation '5'
-	///其它
-	#define THOST_FTDC_FCC_Other '6'
+		/////////////////////////////////////////////////////////////////////////
+		///TFtdcForceCloseReasonType是一个强平原因类型
+		/////////////////////////////////////////////////////////////////////////
+		///非强平
+		#define THOST_FTDC_FCC_NotForceClose '0'
+		///资金不足
+		#define THOST_FTDC_FCC_LackDeposit '1'
+		///客户超仓
+		#define THOST_FTDC_FCC_ClientOverPositionLimit '2'
+		///会员超仓
+		#define THOST_FTDC_FCC_MemberOverPositionLimit '3'
+		///持仓非整数倍
+		#define THOST_FTDC_FCC_NotMultiple '4'
+		///违规
+		#define THOST_FTDC_FCC_Violation '5'
+		///其它
+		#define THOST_FTDC_FCC_Other '6'
 	*/
 
 	///强平原因
